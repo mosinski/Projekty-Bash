@@ -1,0 +1,68 @@
+#!/bin/sh
+
+echo "Praca na liczbach"
+echo "Wybierz czynność:"
+echo "1.Dodawanie"
+echo "2.Odejmowanie"
+echo "3.Mnożenie"
+echo "4.Dzielenie"
+echo "5.Potęgowanie"
+echo "6.Pierwiastkowanie"
+read a
+echo "wartosc a to: $a"
+
+if [ $a -eq 1 ]
+then
+echo "Podaj liczbe a:"
+read b
+echo "Podaj liczbe b:"
+read c
+ans=$(( b + c ))
+echo "Wynik to: $ans"
+
+elif [ $a -eq 2 ]
+then
+echo "Podaj liczbe a:"
+read b
+echo "Podaj liczbe b:"
+read c
+ans=$(( b - c ))
+echo "Wynik to: $ans"
+
+elif [ $a -eq 3 ]
+then
+echo "Podaj liczbe a:"
+read b
+echo "Podaj liczbe b:"
+read c
+ans=$(( b * c ))
+echo "Wynik to: $ans"
+
+elif [ $a -eq 4 ]
+then
+echo "Podaj liczbe a:"
+read b
+echo "Podaj liczbe b:"
+read c
+ans=$(( b / c ))
+echo "Wynik to: $ans"
+
+elif [ $a -eq 5 ]
+then
+echo "Podaj liczbe a:"
+read b
+echo "Podaj liczbe b:"
+read c
+ans=$(( b ** c ))
+echo "Wynik to: $ans"
+
+elif [ $a -eq 6 ]
+then
+echo "Podaj liczbe a:"
+read b
+ans=`echo "sqrt ($b)" | bc -l`
+echo "Wynik to: $ans"
+
+else 
+echo "Wpisałeś niepoprawny znak!\nKoniec Programu"
+fi
