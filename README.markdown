@@ -1,4 +1,5 @@
 # Proste programiki w Bash-u#
 
-Aby je uruchomić wystarczy sh "nazwa programu"
+Aby je uruchomić wystarczy 
+> bash "nazwa programu"
 
