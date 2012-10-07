@@ -1,0 +1,17 @@
+#!/bin/bash
+
+echo "Program lotek"
+LOSOWA1=$RANDOM
+LOSOWA2=$RANDOM
+LOSOWA3=$RANDOM
+LOSOWA4=$RANDOM
+LOSOWA5=$RANDOM
+RANGE=99
+let "LOSOWA1 %= $RANGE"
+let "LOSOWA2 %= $RANGE"
+let "LOSOWA3 %= $RANGE"
+let "LOSOWA4 %= $RANGE"
+let "LOSOWA5 %= $RANGE"
+tablica=($LOSOWA1, $LOSOWA2, $LOSOWA3, $LOSOWA4, $LOSOWA5)
+echo "Wylosowane liczby to: "
+echo ${tablica[*]}
