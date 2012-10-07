@@ -1,11 +1,19 @@
 #!/bin/sh 
 while true 
 do
-echo "Menu\n0-Wyjście z programu\n1-Zapisywanie do pliku\n2-Odczytywanie z pliku"
+
+echo "\nMenu\n"
+echo "0-Wyjście z programu"
+echo "1-Zapisywanie do pliku"
+echo "2-Odczytywanie z pliku"
+echo -n "> "
+
 read d
+
 if [ $d -eq 0 ]
  then echo "Koniec Programu"; exit 4
 fi
+
 case "$d" in
   "1") echo 'Napisz wiadomość:'
 	while true 
