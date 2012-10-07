@@ -1,0 +1,30 @@
+#!/bin/sh
+while true 
+do
+echo "\nMenu\n"
+echo "0-Wyjście z programu"
+echo "1-Z dzięsiętnej na Binarną"
+echo "2-Z dziesiętnej na szestnastkową"
+
+echo -n "> " 
+read a
+
+if [ $a -eq 0 ]
+ then echo "Koniec Programu"; exit 4
+
+elif [ $a -eq 1 ]
+then
+ echo 'Wpisz liczbę dziesiętną:'
+ read b
+ ans=`echo "obase=2;$b" | bc`
+ echo "$ans"
+
+elif [ $a -eq 2 ]
+then
+ echo 'Wpisz liczbę dziesiętną:'
+ read c
+ ans=`echo "obase=16;$c" | bc`
+ echo "$ans"
+
+fi
+done
