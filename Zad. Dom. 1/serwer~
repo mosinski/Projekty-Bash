@@ -3,6 +3,23 @@ while true
 do
 ZMIENNA=`sed -n 1p dane.txt`
 if [ $ZMIENNA -eq 1 ]
- then echo "JEST!"; exit 4
+ then
+ echo "z dziesiętnej na binarną"; 
+ echo "" > dane.txt; 
+ while true 
+ do
+ LICZBA=`sed -n 1p dane.txt`
+ if [ $LICZBA != "" ]
+ then
+ WYNIK=`echo "obase=2;$LICZBA" | bc`
+ echo $WYNIK > wynik.txt; 
+ break
+ fi
+ done
+ 
+
+elif [ $ZMIENNA -eq 2 ]
+ then
+ echo "z dziesiętnej na szesnastkową"; echo "" > dane.txt; exit 4
 fi
 done

@@ -22,6 +22,7 @@ then
  while [ $WYNIK !="" ]
  do
  WYNIK=`sed -n 1p wynik.txt`
+ echo "liczba z wyniku to $WYNIK"
  done
  echo "" > dane.txt
  echo "Wynik to: $WYNIK"
