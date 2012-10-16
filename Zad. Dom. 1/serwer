@@ -12,7 +12,7 @@ if [ $ZMIENNA -eq 1 ]
  if [ $LICZBA != "" ]
  then
  WYNIK=`echo "obase=2;$LICZBA" | bc`
- echo $WYNIK > wynik.txt; 
+ echo $WYNIK > wyniki.txt; 
  break
  fi
  done
@@ -27,7 +27,7 @@ elif [ $ZMIENNA -eq 2 ]
  if [ $LICZBA != "" ]
  then
  WYNIK=`echo "obase=16;$LICZBA" | bc`
- echo $WYNIK > wynik.txt; 
+ echo $WYNIK > wyniki.txt; 
  break
  fi
  done

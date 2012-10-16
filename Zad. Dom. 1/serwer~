@@ -31,9 +31,6 @@ elif [ $ZMIENNA -eq 2 ]
  break
  fi
  done
-else 
- then
- echo "Niewłaściwy wybór. Spróbuj jeszcze raz.";
- fi
+
 fi
 done

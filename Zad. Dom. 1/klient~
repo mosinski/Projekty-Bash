@@ -13,7 +13,8 @@ echo -n "> "
 read a
 
 if [ $a -eq 0 ]
- then echo "Koniec Programu"; exit 4
+ then echo "Koniec Programu"; 
+ exit 4
 
 elif [ $a -eq 1 ]
 then

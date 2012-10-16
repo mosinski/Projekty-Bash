@@ -26,10 +26,10 @@ then
  WYNIK=""
  while [ $WYNIK !="" ]
  do
- WYNIK=`sed -n 1p wynik.txt`
+ WYNIK=`sed -n 1p wyniki.txt`
  done
  echo "" > dane.txt
- echo "" > wynik.txt
+ echo "" > wyniki.txt
  echo -e '\0033\0143'
  echo "Wynik to: $WYNIK"
 
@@ -43,10 +43,10 @@ then
  WYNIK=""
  while [ $WYNIK !="" ]
  do
- WYNIK=`sed -n 1p wynik.txt`
+ WYNIK=`sed -n 1p wyniki.txt`
  done
  echo "" > dane.txt
- echo "" > wynik.txt
+ echo "" > wyniki.txt
  echo -e '\0033\0143'
  echo "Wynik to: $WYNIK"
 
