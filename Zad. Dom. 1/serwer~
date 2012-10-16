@@ -1,0 +1,8 @@
+#!/bin/sh
+while true 
+do
+ZMIENNA=`sed -n 1p dane.txt`
+if [ $ZMIENNA -eq 1 ]
+ then echo "JEST!"; exit 4
+fi
+done
