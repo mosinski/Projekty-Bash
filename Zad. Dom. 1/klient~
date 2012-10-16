@@ -1,10 +1,13 @@
 #!/bin/sh
 while true 
 do
-echo "\nMenu\n"
+echo ""
+echo "Menu"
+echo "-------------------------------"
 echo "0-Wyjście z programu"
 echo "1-Z dzięsiętnej na Binarną"
 echo "2-Z dziesiętnej na szestnastkową"
+echo "-------------------------------"
 
 echo -n "> " 
 read a
@@ -16,24 +19,39 @@ elif [ $a -eq 1 ]
 then
  echo "$a" > dane.txt;
  echo 'Wpisz liczbę dziesiętną:'
+ echo -n "> " 
  read b
  echo "$b" > dane.txt
  WYNIK=""
  while [ $WYNIK !="" ]
  do
  WYNIK=`sed -n 1p wynik.txt`
- echo "liczba z wyniku to $WYNIK"
  done
  echo "" > dane.txt
+ echo "" > wynik.txt
+ echo -e '\0033\0143'
  echo "Wynik to: $WYNIK"
 
 elif [ $a -eq 2 ]
 then
  echo "$a" > dane.txt;
  echo 'Wpisz liczbę dziesiętną:'
+ echo -n "> " 
  read c
- ans=`echo "obase=16;$c" | bc`
- echo "$ans"
+ echo "$c" > dane.txt
+ WYNIK=""
+ while [ $WYNIK !="" ]
+ do
+ WYNIK=`sed -n 1p wynik.txt`
+ done
+ echo "" > dane.txt
+ echo "" > wynik.txt
+ echo -e '\0033\0143'
+ echo "Wynik to: $WYNIK"
+
+else 
+ echo -e '\0033\0143'
+ echo "Niewłaściwy wybór. Spróbuj jeszcze raz."
 
 fi
 done
