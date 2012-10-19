@@ -6,7 +6,8 @@ echo "Menu"
 echo "-------------------------------"
 echo "0-Wyjście z programu"
 echo "1-Z dzięsiętnej na Binarną"
-echo "2-Z dziesiętnej na szestnastkową"
+echo "2-Z Binarnej na dziesiętną"
+echo "3-Z dziesiętnej na szestnastkową"
 echo "-------------------------------"
 
 echo -n "> " 
@@ -26,14 +27,31 @@ then
  WYNIK=""
  while [ $WYNIK !="" ]
  do
- WYNIK=`sed -n 1p wynik.txt`
+ WYNIK=`sed -n 1p wyniki.txt`
  done
  echo "" > dane.txt
- echo "" > wynik.txt
+ echo "" > wyniki.txt
  echo -e '\0033\0143'
  echo "Wynik to: $WYNIK"
 
 elif [ $a -eq 2 ]
+then
+ echo "$a" > dane.txt;
+ echo 'Wpisz liczbę binarną:'
+ echo -n "> " 
+ read c
+ echo "$c" > dane.txt
+ WYNIK=""
+ while [ $WYNIK !="" ]
+ do
+ WYNIK=`sed -n 1p wyniki.txt`
+ done
+ echo "" > dane.txt
+ echo "" > wyniki.txt
+ echo -e '\0033\0143'
+ echo "Wynik to: $WYNIK"
+
+elif [ $a -eq 3 ]
 then
  echo "$a" > dane.txt;
  echo 'Wpisz liczbę dziesiętną:'
@@ -43,10 +61,27 @@ then
  WYNIK=""
  while [ $WYNIK !="" ]
  do
- WYNIK=`sed -n 1p wynik.txt`
+ WYNIK=`sed -n 1p wyniki.txt`
  done
  echo "" > dane.txt
- echo "" > wynik.txt
+ echo "" > wyniki.txt
+ echo -e '\0033\0143'
+ echo "Wynik to: $WYNIK"
+
+elif [ $a -eq 4 ]
+then
+ echo "$a" > dane.txt;
+ echo 'Wpisz liczbę szesnastkową:'
+ echo -n "> " 
+ read c
+ echo "$c" > dane.txt
+ WYNIK=""
+ while [ $WYNIK !="" ]
+ do
+ WYNIK=`sed -n 1p wyniki.txt`
+ done
+ echo "" > dane.txt
+ echo "" > wyniki.txt
  echo -e '\0033\0143'
  echo "Wynik to: $WYNIK"
 

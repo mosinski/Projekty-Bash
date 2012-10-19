@@ -12,12 +12,29 @@ if [ $ZMIENNA -eq 1 ]
  if [ $LICZBA != "" ]
  then
  WYNIK=`echo "obase=2;$LICZBA" | bc`
- echo $WYNIK > wynik.txt; 
+ echo $WYNIK > wyniki.txt; 
  break
  fi
  done
  
+
+
 elif [ $ZMIENNA -eq 2 ]
+ then
+ echo "z binarnej na dziesietną"; 
+ echo "" > dane.txt; 
+ while true 
+ do
+ LICZBA=`sed -n 1p dane.txt`
+ if [ $LICZBA != "" ]
+ then
+ WYNIK=`echo "ibase=2;$LICZBA" | bc`
+ echo $WYNIK > wyniki.txt; 
+ break
+ fi
+ done
+
+elif [ $ZMIENNA -eq 3 ]
  then
  echo "z dziesiętnej na szesnastkową"; 
  echo "" > dane.txt; 
@@ -27,7 +44,22 @@ elif [ $ZMIENNA -eq 2 ]
  if [ $LICZBA != "" ]
  then
  WYNIK=`echo "obase=16;$LICZBA" | bc`
- echo $WYNIK > wynik.txt; 
+ echo $WYNIK > wyniki.txt; 
+ break
+ fi
+ done
+
+elif [ $ZMIENNA -eq 4 ]
+ then
+ echo "z szesnastkowej na dziesiętną"; 
+ echo "" > dane.txt; 
+ while true 
+ do
+ LICZBA=`sed -n 1p dane.txt`
+ if [ $LICZBA != "" ]
+ then
+ WYNIK=`echo "ibase=16;$LICZBA" | bc`
+ echo $WYNIK > wyniki.txt; 
  break
  fi
  done
