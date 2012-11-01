@@ -2,7 +2,7 @@
 while true 
 do
 ZMIENNA=`sed -n 1p dane.txt`
-if [ $ZMIENNA -eq 1 ]
+if [ $ZMIENNA == "1" ]
  then
  echo "z dziesiętnej na binarną"; 
  echo "" > dane.txt; 

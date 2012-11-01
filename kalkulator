@@ -1,5 +1,6 @@
 #!/bin/sh
 
+echo "Ten proces ma PID $BASHPID"
 echo "Praca na liczbach"
 echo "Wybierz czynność:"
 echo "1.Dodawanie"

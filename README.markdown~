@@ -1,8 +1,5 @@
-# Witam oto mój blog w Rails 3 <font color="blue">Mosinski Blog</font>#
+# Proste programiki w Bash-u#
 
-Blog korzysta z template-a ze strony 
-> http://blog.btemplates.com/
+Aby je uruchomić wystarczy 
+> bash "nazwa programu"
 
-
-# Blog na Heroku#
-> http://mosinskiblog.herokuapp.com/
