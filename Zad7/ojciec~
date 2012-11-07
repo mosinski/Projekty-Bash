@@ -1,0 +1,12 @@
+#!/bin/bash
+
+declare -i x y
+echo -n "Podaj liczbe calkowita:"
+read x
+./syn $x&
+let y=x*x
+wait $!
+echo "Wynik: $?"
+let y=y+$?
+echo "Wynik: $y"
+exit 0
