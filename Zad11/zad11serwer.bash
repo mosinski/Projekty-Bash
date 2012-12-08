@@ -31,7 +31,7 @@ else
     if [ -p $klientfifo ]; then 
     LICZBA=$2 
     WYNIK=`echo "obase=2;$LICZBA" | bc`
-    sleep 120
+    sleep 10
     echo $WYNIK > $klientfifo 
     fi 
     exit 0 
