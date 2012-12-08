@@ -3,14 +3,18 @@ trap 'exit 0' SIGUSR1
 trap 'sygnał zablokowany: SIGHUP' SIGHUP 
 trap 'sygnał zablokowany: SIGTERM' SIGTERM 
 
-klientplikpipe=`mkfifo ~/tmp/klientfifo`
-serwerplikpipe=`mkfifo ~/tmp/serwerfifo`
+KLIENT=$HOME"/tmp/klientfifo"
+SERWER=$HOME"/tmp/serwerfifo"
 
-if [ !-e "~/tmp/klientfifo" ]
-$klientplikpipe
+
+if [ ! -e $KLIENT ]
+then
+klientplikpipe=`mkfifo ~/tmp/klientfifo`
 fi
-if [ !-e "~/tmp/serwerfifo" ]
-$serwerplikpipe
+
+if [ ! -e $SERWER ]
+then
+serwerplikpipe=`mkfifo ~/tmp/serwerfifo`
 fi
 
 if [ $# -ne 2 ] 
@@ -27,6 +31,7 @@ else
     if [ -p $klientfifo ]; then 
     LICZBA=$2 
     WYNIK=`echo "obase=2;$LICZBA" | bc`
+    sleep 120
     echo $WYNIK > $klientfifo 
     fi 
     exit 0 
