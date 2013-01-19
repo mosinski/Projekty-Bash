@@ -33,7 +33,6 @@ tab_pids[tab_licz]=$!
 let tab_licz=tab_licz+1 
 
 else 
-
 if [ $filename = $1 ]; then 
 echo "Znalazłem: $curr_dir/$filename" 
 
