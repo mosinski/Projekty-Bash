@@ -26,10 +26,10 @@ curr_dir=`pwd`
 declare -a tab_pids 
 tab_licz=0 
 
-for filename in `ls $curr_dir`; do 
+for filename in `ls $2`; do 
 if [ -d $filename ]; then 
-$zad_dir/$0 $1 $curr_dir/$filename & 
-tab_pids[tablicz]=$! 
+/home/studinf/mosinski/Desktop/Projekty-Bash/Zad9/zad9.bash $1 $2/$filename & 
+tab_pids[tab_licz]=$! 
 let tab_licz=tab_licz+1 
 
 else 
