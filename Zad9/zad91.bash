@@ -26,13 +26,12 @@ curr_dir=`pwd`
 declare -a tab_pids 
 tab_licz=0 
 
-for filename in `ls $2`; do 
+for filename in `ls $curr_dir`; do 
 if [ -d $filename ]; then 
-/home/studinf/mosinski/Desktop/Projekty-Bash/Zad9/zad9.bash $1 $2/$filename & 
+/home/studinf/mosinski/Desktop/Projekty-Bash/Zad9/zad9.bash $1 $curr_dir/$filename & 
 tab_pids[tab_licz]=$! 
 let tab_licz=tab_licz+1 
-
-else 
+fi 
 
 if [ $filename = $1 ]; then 
 echo "Znalazłem: $curr_dir/$filename" 
@@ -41,7 +40,7 @@ if [ ! -e $plik_kontrolny ]; then
 touch $plik_kontrolny 
 fi 
 fi 
-fi 
+
 done 
 
 for i in ${tab_pids[@]} 
